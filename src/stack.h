@@ -31,8 +31,6 @@
  * @param pBuf      Pointer to the stack buffer
  * @param bufSize   Size of the buffer, must be an integer multiple of datasize
  * @param dataSize  Size of the data type that the stack is handling
- *
- * @return none
  ******************************************************************************/
 void Stack_Init(Stack_t *pObj, void *pBuf, size_t bufSize, size_t dataSize);
 
