@@ -22,6 +22,9 @@
  *                           E N U M E R A T I O N S                          *
  *============================================================================*/
 
+/**
+ * @brief Error flag
+**/
 typedef enum _Stack_Error_e
 {
     Stack_Error_None = 0,
@@ -32,6 +35,11 @@ typedef enum _Stack_Error_e
  *                             S T R U C T U R E S                            *
  *============================================================================*/
 
+/**
+ * @brief  Stack Object
+ *
+ * @note   This object should never be directly manipulated by the caller.
+**/
 typedef struct _Stack_t
 {
     size_t   top;      /*!< Buffer Index to the top of the stack */
