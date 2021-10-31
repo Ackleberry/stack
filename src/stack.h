@@ -75,8 +75,8 @@ Stack_Error_e Stack_Pop(Stack_t *pObj, void *pDataOutVoid);
 /*******************************************************************************
  * @brief  Peek at the data on the top of the stack
  *
- * @param  pObj          Pointer to the stack object
- * @param  pDataOutVoid  Pointer to the peeked data
+ * @param pObj          Pointer to the stack object
+ * @param pDataOutVoid  Pointer to the peeked data
  *
  * @returns Stack error flag
  ******************************************************************************/
