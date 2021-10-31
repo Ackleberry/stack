@@ -39,8 +39,8 @@ Stack_Error_e Stack_Push(Stack_t *pObj, void *pDataInVoid)
     uint8_t *pDataIn = (uint8_t *)pDataInVoid;
 
     /* Push the data on to the stack one byte at a time */
-    size_t idx = 0;
-    while (idx < pObj->dataSize)
+    size_t byte = 0;
+    while (byte < pObj->dataSize)
     {
         if (Stack_IsFull(pObj))
         {
@@ -49,8 +49,8 @@ Stack_Error_e Stack_Push(Stack_t *pObj, void *pDataInVoid)
         }
 
         pObj->top++;
-        pObj->pBuf[pObj->top] = pDataIn[idx];
-        idx++;
+        pObj->pBuf[pObj->top] = pDataIn[byte];
+        byte++;
     }
 
     return err;
@@ -62,8 +62,8 @@ Stack_Error_e Stack_Pop(Stack_t *pObj, void *pDataOutVoid)
     uint8_t *pDataOut = (uint8_t *)pDataOutVoid;
 
     /* Pop the data off the stack one byte at a time */
-    size_t idx = pObj->dataSize;
-    while (idx > 0)
+    size_t byte = pObj->dataSize;
+    while (byte > 0)
     {
         if (Stack_IsEmpty(pObj))
         {
@@ -71,8 +71,8 @@ Stack_Error_e Stack_Pop(Stack_t *pObj, void *pDataOutVoid)
             break;
         }
 
-        idx--;
-        pDataOut[idx] = pObj->pBuf[pObj->top];
+        byte--;
+        pDataOut[byte] = pObj->pBuf[pObj->top];
         pObj->top--;
     }
 
