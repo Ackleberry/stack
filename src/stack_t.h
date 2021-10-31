@@ -42,7 +42,7 @@ typedef enum _Stack_Error_e
 **/
 typedef struct _Stack_t
 {
-    size_t   top;      /*!< Buffer Index to the top of the stack */
+    size_t   top;      /*!< Buffer cursor to the top of the stack */
     uint8_t *pBuf;     /*!< Pointer to the stack buffer */
     size_t   bufSize;  /*!< Size of the stack buffer */
     size_t   dataSize; /*!< Size of the data type to be stored in the stack */
