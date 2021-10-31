@@ -55,31 +55,31 @@ bool Stack_IsFull(Stack_t *pObj);
 /*******************************************************************************
  * @brief  Pushes some data type onto the stack
  *
- * @param pObj     Pointer to the stack object
- * @param pDataIn  Pointer to the data that will be pushed onto the stack
+ * @param pObj         Pointer to the stack object
+ * @param pDataInVoid  Pointer to the data that will be pushed onto the stack
  *
  * @returns Stack error flag
  ******************************************************************************/
-Stack_Error_e Stack_Push(Stack_t *pObj, void *pDataIn);
+Stack_Error_e Stack_Push(Stack_t *pObj, void *pDataInVoid);
 
 /*******************************************************************************
  * @brief  Pops some data type off the stack
  *
- * @param pObj      Pointer to the stack object
- * @param pDataOut  Pointer to the data that will be popped off the stack
+ * @param pObj          Pointer to the stack object
+ * @param pDataOutVoid  Pointer to the data that will be popped off the stack
  *
  * @returns Stack error flag
  ******************************************************************************/
-Stack_Error_e Stack_Pop(Stack_t *pObj, void *pDataOut);
+Stack_Error_e Stack_Pop(Stack_t *pObj, void *pDataOutVoid);
 
 /*******************************************************************************
  * @brief  Peek at the data on the top of the stack
  *
- * @param  pObj      Pointer to the stack object
- * @param  pDataOut  Pointer to the peeked data
+ * @param  pObj          Pointer to the stack object
+ * @param  pDataOutVoid  Pointer to the peeked data
  *
  * @returns Stack error flag
  ******************************************************************************/
-Stack_Error_e Stack_Peek(Stack_t *pObj, void *pDataOut);
+Stack_Error_e Stack_Peek(Stack_t *pObj, void *pDataOutVoid);
 
 #endif /* STACK_H_INCLUDED */
