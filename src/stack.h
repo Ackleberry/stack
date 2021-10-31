@@ -37,10 +37,6 @@ void Stack_Init(Stack_t *pObj, void *pBuf, size_t bufSize, size_t dataSize);
 /*******************************************************************************
  * @brief  Check if the stack is empty
  *
- * @details  Stack top is considered empty when set to largest `size_t` value,
- *           SIZE_MAX. The first added element "rolls" the top over from
- *           SIZE_MAX to 0.
- *
  * @param pObj  Pointer to the stack object
  *
  * @returns true if empty
@@ -49,9 +45,6 @@ bool Stack_IsEmpty(Stack_t *pObj);
 
 /*******************************************************************************
  * @brief Check if the stack is full
- *
- * @details  Stack top is considered full when set to one less than the buffer
- *           size.
  *
  * @param pObj  Pointer to the stack object
  *
