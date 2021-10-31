@@ -85,7 +85,7 @@ Stack_Error_e Stack_Peek(Stack_t *pObj, void *pDataOutVoid)
     size_t top = pObj->top;
 
     err = Stack_Pop(pObj, pDataOutVoid);
-    pObj->top = top;
 
+    pObj->top = top;
     return err;
 }
